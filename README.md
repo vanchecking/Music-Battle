@@ -6,6 +6,19 @@ The app is not only about guessing songs — it focuses on **competitive gamepla
 
 ---
 
+## 🎬 Demo Videos
+
+### 🔐 Login Flow
+https://raw.githubusercontent.com/USER/REPO/main/login.mp4
+
+### 🎮 Gameplay (5 Tint Mode)
+https://raw.githubusercontent.com/USER/REPO/main/5tint.mp4
+
+### 💰 History & Payment
+https://raw.githubusercontent.com/USER/REPO/main/historyandpayment.mp4
+
+---
+
 ## 🚀 Tech Stack
 
 - UIKit / SwiftUI  
@@ -33,13 +46,13 @@ The app is not only about guessing songs — it focuses on **competitive gamepla
 The app follows a pragmatic **MVVM + Coordinator** architecture designed for real-world UIKit constraints.
 
 - **View (UIView)** – UI layout and rendering only  
-- **ViewController** – handles user interaction and binds data to ViewModel (manual binding + Combine where appropriate)  
+- **ViewController** – handles user interaction and binds data to ViewModel  
 - **ViewModel** – business logic and state management  
-- **Services** – injected via initializers (explicit dependencies, testable design)  
+- **Services** – injected via initializers  
 - **Coordinator** – navigation flow and screen transitions  
-- Centralized error handling layer for consistent UX  
+- Centralized error handling layer  
 
-The architecture follows **SOLID principles**, focusing on modularity, low coupling, and testability through protocol-based abstractions and dependency injection.
+The architecture follows **SOLID principles**, focusing on modularity and testability.
 
 ---
 
@@ -51,33 +64,14 @@ The architecture follows **SOLID principles**, focusing on modularity, low coupl
   - Hits  
   - Artist-based selection  
 
-- Artist mode with dynamic flow:
-  - Artist → albums → randomly selected tracks for gameplay variety  
-
-- Music quiz gameplay based on short Apple Music clips  
-- Competitive game loop with scoring system  
-- Adaptive AI opponent that adjusts difficulty based on player performance  
-- Rating system updated after each session  
-- Results screen with progress tracking  
-- Open tracks in Apple Music + add to library  
-- Reactive UI updates using Combine  
-- Caching layer for performance optimization  
-- Monetization via AdMob + Adapty subscriptions  
-- Analytics with Amplitude + AppsFlyer  
-- Firebase + CloudKit for data storage  
-
----
-
-## ⚙️ Core Responsibilities
-
-- Built production iOS features using UIKit and SwiftUI  
-- Designed scalable architecture using MVVM + Coordinator  
-- Integrated Apple Music (MusicKit) for audio playback  
-- Implemented adaptive gameplay systems (AI difficulty scaling)  
-- Managed complex async flows using Combine  
-- Built caching strategies to reduce network usage  
-- Integrated multiple third-party services (Firebase, AdMob, Adapty, etc.)  
-- Improved performance through optimization and refactoring  
-- Implemented centralized error handling system  
-- Worked with both cloud and local storage solutions  
-- Supported release cycle via TestFlight & App Store builds  
+- Artist mode with dynamic flow (artist → albums → tracks)  
+- Apple Music-based quiz gameplay  
+- Competitive scoring system  
+- Adaptive AI opponent difficulty  
+- Results + progress tracking  
+- Open track in Apple Music  
+- Combine-based reactive UI  
+- Performance caching layer  
+- Monetization (AdMob + subscriptions)  
+- Analytics (Amplitude + AppsFlyer)  
+- Firebase + CloudKit integration  
