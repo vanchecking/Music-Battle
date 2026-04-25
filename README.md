@@ -8,13 +8,13 @@ The app is not only about guessing songs — it focuses on **competitive gamepla
 ## 🎬 Demo Videos
 
 ### 🔐 Login Flow
-[▶ Watch video](login.mp4)
+<video src="login.mp4" controls width="300"></video>
 
 ### 🎮 Gameplay (5 Tint Mode)
-[▶ Watch video](5tint.mp4)
+<video src="5tint" controls width="300"></video>
 
 ### 💰 History & Payment
-[▶ Watch video](historyandpayment.mp4)
+<video src="historyandpayment.mp4" controls width="300"></video>
 
 ---
 
