@@ -8,6 +8,7 @@ The app is not only about guessing songs — it focuses on **competitive gamepla
 ## 🎬 Demo Videos
 
 ### 🔐 Login Flow
+<video src="https://github.com/vanchecking/Music-Battle/releases/download/release/login.mp4" controls></video>
 [▶ Watch video](https://github.com/vanchecking/Music-Battle/releases/download/release/login.mp4)
 
 ### 🎮 Gameplay (5 Tint Mode)
