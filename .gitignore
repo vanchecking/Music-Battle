@@ -1,11 +1,13 @@
 # Xcode
 build/
 DerivedData/
-*.xcworkspace
-!default.xcworkspace
 xcuserdata/
 *.xcuserstate
 *.xcscmblueprint
+
+# Workspaces
+*.xcworkspace
+!default.xcworkspace
 
 # Swift Package Manager
 .swiftpm/
@@ -24,10 +26,10 @@ fastlane/Preview.html
 fastlane/screenshots/
 fastlane/test_output/
 
-# Firebase / Google
+# Firebase / Google (если не хочешь коммитить ключи)
 GoogleService-Info.plist
 
-# Secrets / configs
+# Secrets
 *.env
 *.secret
 *.key
@@ -56,6 +58,10 @@ GoogleService-Info.plist
 *.gcda
 *.gcov
 
-# Amplitude / Analytics (если кастомные конфиги)
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Analytics (если есть кастомные файлы)
 amplitude_config.json
 analytics_config.json
