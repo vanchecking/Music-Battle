@@ -4,19 +4,16 @@ An iOS music quiz game where users guess songs from short audio clips. Built wit
 
 The app is not only about guessing songs — it focuses on **competitive gameplay and music discovery**, helping users explore new and trending tracks in a fast and engaging way.
 
----
-## 🎬 Demo Videos
+## 🎬 Demo
 
 ### 🔐 Login Flow
-<video src="https://github.com/vanchecking/Music-Battle/releases/download/release/login.mp4" controls></video>
-[▶ Watch video](https://github.com/vanchecking/Music-Battle/releases/download/release/login.mp4)
+![Login Flow](https://github.com/vanchecking/Music-Battle/releases/download/release/login.gif)
 
 ### 🎮 Gameplay (5 Tint Mode)
-[▶ Watch video](https://github.com/vanchecking/Music-Battle/releases/download/release/5tint.mp4)
+![Gameplay](https://github.com/vanchecking/Music-Battle/releases/download/release/5tint.gif)
 
 ### 💰 History & Payment
-[▶ Watch video](https://github.com/vanchecking/Music-Battle/releases/download/release/historyandpayment.mp4)
----
+![History & Payment](https://github.com/vanchecking/Music-Battle/releases/download/release/historyandpayment.gif)
 
 ## 🚀 Tech Stack
 
