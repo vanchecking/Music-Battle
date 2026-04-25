@@ -1,0 +1,809 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D38D91F2F7169B200E158FA /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 8D38D91E2F7169B200E158FA /* GoogleMobileAds */; };
+		8D54A64D2F77F12A00606818 /* Adapty in Frameworks */ = {isa = PBXBuildFile; productRef = 8D54A64C2F77F12A00606818 /* Adapty */; };
+		8D6F4B462F528C3D00383E32 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8D6F4B452F528C3D00383E32 /* Lottie */; };
+		8DB0BC342F82A1FE0095B2DB /* AmplitudeUnified in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB0BC332F82A1FE0095B2DB /* AmplitudeUnified */; };
+		8DB0BD032F82A4D70095B2DB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB0BD022F82A4D70095B2DB /* FirebaseAnalytics */; };
+		8DB0BD052F82A4D70095B2DB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB0BD042F82A4D70095B2DB /* FirebaseAuth */; };
+		8DB0BD072F82A4D70095B2DB /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB0BD062F82A4D70095B2DB /* FirebaseCrashlytics */; };
+		8DB0BD092F82A4D70095B2DB /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB0BD082F82A4D70095B2DB /* FirebaseRemoteConfig */; };
+		8DDD0BE22F4534D600CC6F62 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8DDD0BE12F4534D600CC6F62 /* .swiftlint.yml */; };
+		8DDD0BF52F4759BB00CC6F62 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DDD0BF42F4759BB00CC6F62 /* SnapKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8DDD0BC32F45341D00CC6F62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DDD0BA42F45341C00CC6F62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DDD0BAB2F45341C00CC6F62;
+			remoteInfo = "Music Battle Guess Your Songs";
+		};
+		8DDD0BCD2F45341D00CC6F62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DDD0BA42F45341C00CC6F62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DDD0BAB2F45341C00CC6F62;
+			remoteInfo = "Music Battle Guess Your Songs";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8D35474E2F4B5B3400D671C4 /* Music Battle Guess Your Songs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Music Battle Guess Your Songs-Bridging-Header.h"; sourceTree = "<group>"; };
+		8DDD0BAC2F45341C00CC6F62 /* Music Battle Guess Your Songs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Battle Guess Your Songs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DDD0BC22F45341D00CC6F62 /* Music Battle Guess Your SongsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music Battle Guess Your SongsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DDD0BCC2F45341D00CC6F62 /* Music Battle Guess Your SongsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music Battle Guess Your SongsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DDD0BE12F4534D600CC6F62 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8DDD0BD42F45341D00CC6F62 /* Exceptions for "Music Battle Guess Your Songs" folder in "Music Battle Guess Your Songs" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8DDD0BAB2F45341C00CC6F62 /* Music Battle Guess Your Songs */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8DDD0BAE2F45341C00CC6F62 /* Music Battle Guess Your Songs */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8DDD0BD42F45341D00CC6F62 /* Exceptions for "Music Battle Guess Your Songs" folder in "Music Battle Guess Your Songs" target */,
+			);
+			path = "Music Battle Guess Your Songs";
+			sourceTree = "<group>";
+		};
+		8DDD0BC52F45341D00CC6F62 /* Music Battle Guess Your SongsTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Music Battle Guess Your SongsTests";
+			sourceTree = "<group>";
+		};
+		8DDD0BCF2F45341D00CC6F62 /* Music Battle Guess Your SongsUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Music Battle Guess Your SongsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DDD0BA92F45341C00CC6F62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DB0BD092F82A4D70095B2DB /* FirebaseRemoteConfig in Frameworks */,
+				8D38D91F2F7169B200E158FA /* GoogleMobileAds in Frameworks */,
+				8D54A64D2F77F12A00606818 /* Adapty in Frameworks */,
+				8DB0BD032F82A4D70095B2DB /* FirebaseAnalytics in Frameworks */,
+				8DDD0BF52F4759BB00CC6F62 /* SnapKit in Frameworks */,
+				8DB0BC342F82A1FE0095B2DB /* AmplitudeUnified in Frameworks */,
+				8DB0BD072F82A4D70095B2DB /* FirebaseCrashlytics in Frameworks */,
+				8DB0BD052F82A4D70095B2DB /* FirebaseAuth in Frameworks */,
+				8D6F4B462F528C3D00383E32 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DDD0BBF2F45341D00CC6F62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DDD0BC92F45341D00CC6F62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8DDD0BA32F45341C00CC6F62 = {
+			isa = PBXGroup;
+			children = (
+				8D35474E2F4B5B3400D671C4 /* Music Battle Guess Your Songs-Bridging-Header.h */,
+				8DDD0BAE2F45341C00CC6F62 /* Music Battle Guess Your Songs */,
+				8DDD0BC52F45341D00CC6F62 /* Music Battle Guess Your SongsTests */,
+				8DDD0BCF2F45341D00CC6F62 /* Music Battle Guess Your SongsUITests */,
+				8DDD0BAD2F45341C00CC6F62 /* Products */,
+				8DDD0BE12F4534D600CC6F62 /* .swiftlint.yml */,
+			);
+			sourceTree = "<group>";
+		};
+		8DDD0BAD2F45341C00CC6F62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DDD0BAC2F45341C00CC6F62 /* Music Battle Guess Your Songs.app */,
+				8DDD0BC22F45341D00CC6F62 /* Music Battle Guess Your SongsTests.xctest */,
+				8DDD0BCC2F45341D00CC6F62 /* Music Battle Guess Your SongsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DDD0BAB2F45341C00CC6F62 /* Music Battle Guess Your Songs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DDD0BD52F45341D00CC6F62 /* Build configuration list for PBXNativeTarget "Music Battle Guess Your Songs" */;
+			buildPhases = (
+				8DDD0BA82F45341C00CC6F62 /* Sources */,
+				8DDD0BA92F45341C00CC6F62 /* Frameworks */,
+				8DDD0BAA2F45341C00CC6F62 /* Resources */,
+				8DDD0BE02F45342400CC6F62 /* Run Script */,
+				8DB0BC2C2F8277680095B2DB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8DDD0BAE2F45341C00CC6F62 /* Music Battle Guess Your Songs */,
+			);
+			name = "Music Battle Guess Your Songs";
+			packageProductDependencies = (
+				8DDD0BF42F4759BB00CC6F62 /* SnapKit */,
+				8D6F4B452F528C3D00383E32 /* Lottie */,
+				8D38D91E2F7169B200E158FA /* GoogleMobileAds */,
+				8D54A64C2F77F12A00606818 /* Adapty */,
+				8DB0BC332F82A1FE0095B2DB /* AmplitudeUnified */,
+				8DB0BD022F82A4D70095B2DB /* FirebaseAnalytics */,
+				8DB0BD042F82A4D70095B2DB /* FirebaseAuth */,
+				8DB0BD062F82A4D70095B2DB /* FirebaseCrashlytics */,
+				8DB0BD082F82A4D70095B2DB /* FirebaseRemoteConfig */,
+			);
+			productName = "Music Battle Guess Your Songs";
+			productReference = 8DDD0BAC2F45341C00CC6F62 /* Music Battle Guess Your Songs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8DDD0BC12F45341D00CC6F62 /* Music Battle Guess Your SongsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DDD0BDA2F45341D00CC6F62 /* Build configuration list for PBXNativeTarget "Music Battle Guess Your SongsTests" */;
+			buildPhases = (
+				8DDD0BBE2F45341D00CC6F62 /* Sources */,
+				8DDD0BBF2F45341D00CC6F62 /* Frameworks */,
+				8DDD0BC02F45341D00CC6F62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DDD0BC42F45341D00CC6F62 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8DDD0BC52F45341D00CC6F62 /* Music Battle Guess Your SongsTests */,
+			);
+			name = "Music Battle Guess Your SongsTests";
+			packageProductDependencies = (
+			);
+			productName = "Music Battle Guess Your SongsTests";
+			productReference = 8DDD0BC22F45341D00CC6F62 /* Music Battle Guess Your SongsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8DDD0BCB2F45341D00CC6F62 /* Music Battle Guess Your SongsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DDD0BDD2F45341D00CC6F62 /* Build configuration list for PBXNativeTarget "Music Battle Guess Your SongsUITests" */;
+			buildPhases = (
+				8DDD0BC82F45341D00CC6F62 /* Sources */,
+				8DDD0BC92F45341D00CC6F62 /* Frameworks */,
+				8DDD0BCA2F45341D00CC6F62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DDD0BCE2F45341D00CC6F62 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8DDD0BCF2F45341D00CC6F62 /* Music Battle Guess Your SongsUITests */,
+			);
+			name = "Music Battle Guess Your SongsUITests";
+			packageProductDependencies = (
+			);
+			productName = "Music Battle Guess Your SongsUITests";
+			productReference = 8DDD0BCC2F45341D00CC6F62 /* Music Battle Guess Your SongsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8DDD0BA42F45341C00CC6F62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					8DDD0BAB2F45341C00CC6F62 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					8DDD0BC12F45341D00CC6F62 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 8DDD0BAB2F45341C00CC6F62;
+					};
+					8DDD0BCB2F45341D00CC6F62 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 8DDD0BAB2F45341C00CC6F62;
+					};
+				};
+			};
+			buildConfigurationList = 8DDD0BA72F45341C00CC6F62 /* Build configuration list for PBXProject "Music Battle Guess Your Songs" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8DDD0BA32F45341C00CC6F62;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8DDD0BF32F4759BB00CC6F62 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8D6F4B442F528C3D00383E32 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				8D38D91D2F7169B200E158FA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				8D54A64B2F77F12A00606818 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */,
+				8DB0BC322F82A1FE0095B2DB /* XCRemoteSwiftPackageReference "AmplitudeUnified-Swift" */,
+				8DB0BD012F82A4D70095B2DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8DDD0BAD2F45341C00CC6F62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DDD0BAB2F45341C00CC6F62 /* Music Battle Guess Your Songs */,
+				8DDD0BC12F45341D00CC6F62 /* Music Battle Guess Your SongsTests */,
+				8DDD0BCB2F45341D00CC6F62 /* Music Battle Guess Your SongsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DDD0BAA2F45341C00CC6F62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DDD0BE22F4534D600CC6F62 /* .swiftlint.yml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DDD0BC02F45341D00CC6F62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DDD0BCA2F45341D00CC6F62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8DB0BC2C2F8277680095B2DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"/$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+		8DDD0BE02F45342400CC6F62 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed – install with: brew install swiftlint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DDD0BA82F45341C00CC6F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DDD0BBE2F45341D00CC6F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DDD0BC82F45341D00CC6F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DDD0BC42F45341D00CC6F62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DDD0BAB2F45341C00CC6F62 /* Music Battle Guess Your Songs */;
+			targetProxy = 8DDD0BC32F45341D00CC6F62 /* PBXContainerItemProxy */;
+		};
+		8DDD0BCE2F45341D00CC6F62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DDD0BAB2F45341C00CC6F62 /* Music Battle Guess Your Songs */;
+			targetProxy = 8DDD0BCD2F45341D00CC6F62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8DDD0BD62F45341D00CC6F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Music Battle Guess Your Songs/Music Battle Guess Your Songs.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8HZT3TR2ZJ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Music Battle Guess Your Songs/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Music Battle";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "We use Apple Music to search and play song previews for battle gameplay.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We use data to improve the app experience and show relevant ads";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ivanshaptalov.Music-Battle-Guess-Your-Songs";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8DDD0BD72F45341D00CC6F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Music Battle Guess Your Songs/Music Battle Guess Your Songs.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 8HZT3TR2ZJ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Music Battle Guess Your Songs/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Music Battle";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "We use Apple Music to search and play song previews for battle gameplay.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We use data to improve the app experience and show relevant ads";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ivanshaptalov.Music-Battle-Guess-Your-Songs";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8DDD0BD82F45341D00CC6F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8HZT3TR2ZJ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8DDD0BD92F45341D00CC6F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8HZT3TR2ZJ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8DDD0BDB2F45341D00CC6F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8HZT3TR2ZJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ivanshaptalov.Music-Battle-Guess-Your-SongsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Music Battle Guess Your Songs.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Music Battle Guess Your Songs";
+			};
+			name = Debug;
+		};
+		8DDD0BDC2F45341D00CC6F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8HZT3TR2ZJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ivanshaptalov.Music-Battle-Guess-Your-SongsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Music Battle Guess Your Songs.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Music Battle Guess Your Songs";
+			};
+			name = Release;
+		};
+		8DDD0BDE2F45341D00CC6F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8HZT3TR2ZJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ivanshaptalov.Music-Battle-Guess-Your-SongsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Music Battle Guess Your Songs";
+			};
+			name = Debug;
+		};
+		8DDD0BDF2F45341D00CC6F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8HZT3TR2ZJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ivanshaptalov.Music-Battle-Guess-Your-SongsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Music Battle Guess Your Songs";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8DDD0BA72F45341C00CC6F62 /* Build configuration list for PBXProject "Music Battle Guess Your Songs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DDD0BD82F45341D00CC6F62 /* Debug */,
+				8DDD0BD92F45341D00CC6F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DDD0BD52F45341D00CC6F62 /* Build configuration list for PBXNativeTarget "Music Battle Guess Your Songs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DDD0BD62F45341D00CC6F62 /* Debug */,
+				8DDD0BD72F45341D00CC6F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DDD0BDA2F45341D00CC6F62 /* Build configuration list for PBXNativeTarget "Music Battle Guess Your SongsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DDD0BDB2F45341D00CC6F62 /* Debug */,
+				8DDD0BDC2F45341D00CC6F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DDD0BDD2F45341D00CC6F62 /* Build configuration list for PBXNativeTarget "Music Battle Guess Your SongsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DDD0BDE2F45341D00CC6F62 /* Debug */,
+				8DDD0BDF2F45341D00CC6F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8D38D91D2F7169B200E158FA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.1.0;
+			};
+		};
+		8D54A64B2F77F12A00606818 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adaptyteam/AdaptySDK-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.15.7;
+			};
+		};
+		8D6F4B442F528C3D00383E32 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.6.0;
+			};
+		};
+		8DB0BC322F82A1FE0095B2DB /* XCRemoteSwiftPackageReference "AmplitudeUnified-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amplitude/AmplitudeUnified-Swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		8DB0BD012F82A4D70095B2DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.11.0;
+			};
+		};
+		8DDD0BF32F4759BB00CC6F62 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D38D91E2F7169B200E158FA /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D38D91D2F7169B200E158FA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+		8D54A64C2F77F12A00606818 /* Adapty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D54A64B2F77F12A00606818 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */;
+			productName = Adapty;
+		};
+		8D6F4B452F528C3D00383E32 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D6F4B442F528C3D00383E32 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		8DB0BC332F82A1FE0095B2DB /* AmplitudeUnified */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DB0BC322F82A1FE0095B2DB /* XCRemoteSwiftPackageReference "AmplitudeUnified-Swift" */;
+			productName = AmplitudeUnified;
+		};
+		8DB0BD022F82A4D70095B2DB /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DB0BD012F82A4D70095B2DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8DB0BD042F82A4D70095B2DB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DB0BD012F82A4D70095B2DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8DB0BD062F82A4D70095B2DB /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DB0BD012F82A4D70095B2DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		8DB0BD082F82A4D70095B2DB /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DB0BD012F82A4D70095B2DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		8DDD0BF42F4759BB00CC6F62 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DDD0BF32F4759BB00CC6F62 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8DDD0BA42F45341C00CC6F62 /* Project object */;
+}

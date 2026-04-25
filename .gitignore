@@ -1,0 +1,61 @@
+# Xcode
+build/
+DerivedData/
+*.xcworkspace
+!default.xcworkspace
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Firebase / Google
+GoogleService-Info.plist
+
+# Secrets / configs
+*.env
+*.secret
+*.key
+*.pem
+*.p12
+*.mobileprovision
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# IDE
+*.swp
+*.lock
+*.orig
+
+# Archives
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Coverage
+*.gcno
+*.gcda
+*.gcov
+
+# Amplitude / Analytics (если кастомные конфиги)
+amplitude_config.json
+analytics_config.json

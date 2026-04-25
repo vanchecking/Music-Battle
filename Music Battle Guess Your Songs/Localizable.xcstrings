@@ -1,0 +1,229 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "error.adapty.accessLevelMissing" : {
+      "comment" : "Access level missing",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not verify your subscription. Please restore purchases."
+          }
+        }
+      }
+    },
+    "error.adapty.notActivated" : {
+      "comment" : "Adapty not activated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subscription service is not available right now."
+          }
+        }
+      }
+    },
+    "error.adapty.paywallNotFound" : {
+      "comment" : "Paywall not found",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not load the paywall. Please try again."
+          }
+        }
+      }
+    },
+    "error.adapty.productsNotFound" : {
+      "comment" : "Products not found",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No subscription products found. Please try again later."
+          }
+        }
+      }
+    },
+    "error.adapty.profileNotFound" : {
+      "comment" : "Profile not found",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subscription profile not found."
+          }
+        }
+      }
+    },
+    "error.adapty.purchaseFailed" : {
+      "comment" : "Purchase failed",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purchase could not be completed. Please try again."
+          }
+        }
+      }
+    },
+    "error.decoding" : {
+      "comment" : "Decoding error",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Something went wrong while loading data."
+          }
+        }
+      }
+    },
+    "error.invalidCredential" : {
+      "comment" : "Invalid Credential",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid credentials. Please try signing in again."
+          }
+        }
+      }
+    },
+    "error.music.denied" : {
+      "comment" : "Apple Music access denied",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Music access was denied. Please enable it in Settings."
+          }
+        }
+      }
+    },
+    "error.music.unavailable" : {
+      "comment" : "Music unavailable",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Music is not available on this device."
+          }
+        }
+      }
+    },
+    "error.network" : {
+      "comment" : "Network error message",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check your internet connection and try again."
+          }
+        }
+      }
+    },
+    "error.noTracks" : {
+      "comment" : "No Tracks",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No tracks found. Try a different artist or playlist."
+          }
+        }
+      }
+    },
+    "error.noUserId" : {
+      "comment" : "User not found",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User not found. Please sign in again."
+          }
+        }
+      }
+    },
+    "error.title.decoding" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data Error"
+          }
+        }
+      }
+    },
+    "error.title.invalidCredential" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign In Failed"
+          }
+        }
+      }
+    },
+    "error.title.music" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Music Unavailable"
+          }
+        }
+      }
+    },
+    "error.title.network" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connection Error"
+          }
+        }
+      }
+    },
+    "error.title.noTracks" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Tracks"
+          }
+        }
+      }
+    },
+    "error.title.noUserId" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User Not Found"
+          }
+        }
+      }
+    },
+    "error.title.subscription" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subscription Error"
+          }
+        }
+      }
+    },
+    "error.title.unknown" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Something Went Wrong"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
