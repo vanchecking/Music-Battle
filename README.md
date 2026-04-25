@@ -5,17 +5,16 @@ An iOS music quiz game where users guess songs from short audio clips. Built wit
 The app is not only about guessing songs — it focuses on **competitive gameplay and music discovery**, helping users explore new and trending tracks in a fast and engaging way.
 
 ---
-
 ## 🎬 Demo Videos
 
 ### 🔐 Login Flow
-https://raw.githubusercontent.com/USER/REPO/main/login.mp4
+[▶ Watch video](login.mp4)
 
 ### 🎮 Gameplay (5 Tint Mode)
-https://raw.githubusercontent.com/USER/REPO/main/5tint.mp4
+[▶ Watch video](5tint.mp4)
 
 ### 💰 History & Payment
-https://raw.githubusercontent.com/USER/REPO/main/historyandpayment.mp4
+[▶ Watch video](historyandpayment.mp4)
 
 ---
 
