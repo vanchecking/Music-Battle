@@ -7,13 +7,15 @@ The app is not only about guessing songs — it focuses on **competitive gamepla
 ## 🎬 Demo
 
 ### 🔐 Login Flow
-![Login Flow](https://github.com/vanchecking/Music-Battle/releases/download/release/login.gif)
+<img src="https://github.com/vanchecking/Music-Battle/releases/download/release/login.gif" width="300" />
+
 
 ### 🎮 Gameplay (5 Tint Mode)
-![Gameplay](https://github.com/vanchecking/Music-Battle/releases/download/release/5tint.gif)
+<img src="https://github.com/vanchecking/Music-Battle/releases/download/release/5tint.gif" width="300" />
+
 
 ### 💰 History & Payment
-![History & Payment](https://github.com/vanchecking/Music-Battle/releases/download/release/historyandpayment.gif)
+<img src="https://github.com/vanchecking/Music-Battle/releases/download/release/historyandpayment.gif" width="300" />
 
 ## 🚀 Tech Stack
 
