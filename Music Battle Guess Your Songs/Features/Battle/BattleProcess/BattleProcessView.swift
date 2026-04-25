@@ -1,19 +1,25 @@
-// MARK: - Answer State Enum & Color Extension
 //
 //  BattleProcessView.swift
 //  Music Battle Guess Your Songs
 //
 //  Created by PowerMac on 15.03.2026.
 //
+
 import UIKit
 import SnapKit
 
 final class BattleProcessView: UIView {
 
     // MARK: - UI Elements
+
     let roundLabel: UILabel = {
-        let label = makeLabel(text: "Round 1", font: UIFont.boldSystemFont(ofSize: 20), textAlignment: .center, textColor: .label, numberOfLines: 1)
-        return label
+        return makeLabel(
+            text: "Round 1",
+            font: .boldSystemFont(ofSize: 20),
+            textAlignment: .center,
+            textColor: .label,
+            numberOfLines: 1
+        )
     }()
 
     let playerScoreLabelContainer: UIView = {
@@ -25,11 +31,16 @@ final class BattleProcessView: UIView {
     }()
 
     let playerScoreLabel: UILabel = {
-        let label = makeLabel(text: "You: 0", font: UIFont.boldSystemFont(ofSize: 16), textAlignment: .center, textColor: .label, numberOfLines: 1)
+        let label = makeLabel(
+            text: "You: 0",
+            font: .boldSystemFont(ofSize: 16),
+            textAlignment: .center,
+            textColor: .label,
+            numberOfLines: 1
+        )
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         label.lineBreakMode = .byClipping
-        label.textAlignment = .center
         return label
     }()
 
@@ -42,23 +53,31 @@ final class BattleProcessView: UIView {
     }()
 
     let botScoreLabel: UILabel = {
-        let label = makeLabel(text: "Opponent: 0", font: UIFont.boldSystemFont(ofSize: 16), textAlignment: .center, textColor: .label, numberOfLines: 1)
+        let label = makeLabel(
+            text: "Opponent: 0",
+            font: .boldSystemFont(ofSize: 16),
+            textAlignment: .center,
+            textColor: .label,
+            numberOfLines: 1
+        )
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         label.lineBreakMode = .byClipping
-        label.textAlignment = .center
         return label
     }()
 
     let resultLabel: UILabel = {
-        let label = makeLabel(text: "Results will be there", font: UIFont.systemFont(ofSize: 17), textAlignment: .center, textColor: .secondaryLabel, numberOfLines: 0)
-        return label
+        return makeLabel(
+            text: "Results will be there",
+            font: .systemFont(ofSize: 17),
+            textAlignment: .center,
+            textColor: .secondaryLabel,
+            numberOfLines: 0
+        )
     }()
 
     let dudeView = DudeAnimationView()
-
     let backgroundLayer = AppColors.mainGradient()
-
     let answerButtons = AnswerButtonsView()
 
     let loadingIndicator: UIActivityIndicatorView = {
@@ -66,6 +85,8 @@ final class BattleProcessView: UIView {
         indicator.hidesWhenStopped = true
         return indicator
     }()
+
+    // MARK: - Init
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -77,9 +98,15 @@ final class BattleProcessView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - Private Helpers
+    // MARK: - Helpers
 
-    private static func makeLabel(text: String, font: UIFont, textAlignment: NSTextAlignment, textColor: UIColor, numberOfLines: Int) -> UILabel {
+    private static func makeLabel(
+        text: String,
+        font: UIFont,
+        textAlignment: NSTextAlignment,
+        textColor: UIColor,
+        numberOfLines: Int
+    ) -> UILabel {
         let label = UILabel()
         label.text = text
         label.font = font
@@ -89,113 +116,124 @@ final class BattleProcessView: UIView {
         return label
     }
 
+    // MARK: - States
+
     func showLoadingState() {
         loadingIndicator.startAnimating()
+
         roundLabel.isHidden = true
         playerScoreLabel.isHidden = true
         botScoreLabel.isHidden = true
         dudeView.isHidden = true
-        answerButtons.hide()
         resultLabel.isHidden = true
-        botScoreLabelContainer.isHidden = true
+
+        answerButtons.hide()
         playerScoreLabelContainer.isHidden = true
+        botScoreLabelContainer.isHidden = true
     }
 
     func showReadyState() {
         loadingIndicator.stopAnimating()
+
         roundLabel.isHidden = false
         playerScoreLabel.isHidden = false
         botScoreLabel.isHidden = false
         dudeView.isHidden = false
-        answerButtons.show()
         resultLabel.isHidden = true
-        botScoreLabelContainer.isHidden = false
+
+        answerButtons.show()
         playerScoreLabelContainer.isHidden = false
+        botScoreLabelContainer.isHidden = false
     }
 
-    private func setupBackground() {
-        layer.insertSublayer(backgroundLayer, at: 0)
-    }
+    // MARK: - Layout
 
     override func layoutSubviews() {
         super.layoutSubviews()
         backgroundLayer.frame = bounds
     }
 
-    // MARK: - Setup UI
+    private func setupBackground() {
+        layer.insertSublayer(backgroundLayer, at: 0)
+    }
+
     func setupUI() {
 
-        // Добавляем лейблы
-        self.setupBackground()
-        self.addSubview(roundLabel)
-        self.addSubview(playerScoreLabelContainer)
+        setupBackground()
+
+        addSubview(roundLabel)
+        addSubview(playerScoreLabelContainer)
         playerScoreLabelContainer.addSubview(playerScoreLabel)
-        self.addSubview(botScoreLabelContainer)
+
+        addSubview(botScoreLabelContainer)
         botScoreLabelContainer.addSubview(botScoreLabel)
-        self.addSubview(resultLabel)
-        // self.addSubview(trackLabel)
-        self.addSubview(dudeView)
-        self.addSubview(loadingIndicator)
 
-        roundLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide).offset(16)
-            make.centerX.equalToSuperview()
-        }
-        playerScoreLabelContainer.snp.makeConstraints { make in
-            make.top.equalTo(roundLabel.snp.bottom).offset(12)
-            make.leading.equalToSuperview().offset(24)
-            make.width.equalTo(120)
-            make.height.equalTo(40)
-        }
-        playerScoreLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(4)
-        }
-        botScoreLabelContainer.snp.makeConstraints { make in
-            make.top.equalTo(roundLabel.snp.bottom).offset(12)
-            make.trailing.equalToSuperview().inset(24)
-            make.width.equalTo(120)
-            make.height.equalTo(40)
-        }
-        botScoreLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(4)
-        }
-        resultLabel.snp.makeConstraints { make in
-            make.top.equalTo(playerScoreLabel.snp.bottom).offset(24)
-            make.leading.trailing.equalToSuperview().inset(24)
-        }
-        dudeView.snp.makeConstraints { make in
-            make.top.equalTo(resultLabel.snp.bottom).offset(16)
-            make.leading.trailing.equalToSuperview().inset(24)
-            make.height.equalTo(200) // adjust height as needed
+        addSubview(resultLabel)
+        addSubview(dudeView)
+        addSubview(loadingIndicator)
+
+        roundLabel.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide).offset(16)
+            $0.centerX.equalToSuperview()
         }
 
-        // Кнопки ответов
+        playerScoreLabelContainer.snp.makeConstraints {
+            $0.top.equalTo(roundLabel.snp.bottom).offset(12)
+            $0.leading.equalToSuperview().offset(24)
+            $0.width.equalTo(120)
+            $0.height.equalTo(40)
+        }
+
+        playerScoreLabel.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(4)
+        }
+
+        botScoreLabelContainer.snp.makeConstraints {
+            $0.top.equalTo(roundLabel.snp.bottom).offset(12)
+            $0.trailing.equalToSuperview().inset(24)
+            $0.width.equalTo(120)
+            $0.height.equalTo(40)
+        }
+
+        botScoreLabel.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(4)
+        }
+
+        resultLabel.snp.makeConstraints {
+            $0.top.equalTo(playerScoreLabel.snp.bottom).offset(24)
+            $0.leading.trailing.equalToSuperview().inset(24)
+        }
+
+        dudeView.snp.makeConstraints {
+            $0.top.equalTo(resultLabel.snp.bottom).offset(16)
+            $0.leading.trailing.equalToSuperview().inset(24)
+            $0.height.equalTo(200)
+        }
+
         answerButtons.addForSubview(self)
         setupAnswerButtonsConstraints()
 
-        loadingIndicator.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        loadingIndicator.snp.makeConstraints {
+            $0.center.equalToSuperview()
         }
     }
 
     private func setupAnswerButtonsConstraints() {
         for (index, button) in answerButtons.buttons.enumerated() {
-            button.snp.makeConstraints { make in
+            button.snp.makeConstraints {
                 if index == 0 {
-                    make.top.equalTo(dudeView.snp.bottom).offset(32)
+                    $0.top.equalTo(dudeView.snp.bottom).offset(32)
                 } else {
-                    make.top.equalTo(answerButtons.buttons[index-1].snp.bottom).offset(16)
+                    $0.top.equalTo(answerButtons.buttons[index - 1].snp.bottom).offset(16)
                 }
-                make.leading.trailing.equalToSuperview().inset(32)
-                make.height.equalTo(48)
+                $0.leading.trailing.equalToSuperview().inset(32)
+                $0.height.equalTo(48)
             }
         }
     }
 
-    // MARK: - UI Update Helpers
-    func updateTrackLabel(text: String?) {
-        // trackLabel.text = text ?? "No Track"
-    }
+    // MARK: - Updates
+
     func updateRoundLabel(index: Int, roundCount: Int) {
         roundLabel.text = "Round \(index + 1)/\(roundCount)"
     }
@@ -219,12 +257,12 @@ final class BattleProcessView: UIView {
         guard diff != 0 else { return }
 
         let steps = abs(diff)
-        let stepValue = diff > 0 ? 1 : -1
+        let step = diff > 0 ? 1 : -1
         var current = start
         var count = 0
 
         Timer.scheduledTimer(withTimeInterval: 0.5 / Double(steps), repeats: true) { timer in
-            current += stepValue
+            current += step
             update(current)
 
             count += 1
@@ -240,7 +278,8 @@ final class BattleProcessView: UIView {
         }
     }
 
-    // MARK: - Score Label Color Updates
+    // MARK: - Colors
+
     func updatePlayerScoreColor(for state: AnswerState) {
         playerScoreLabel.textColor = state.color
     }

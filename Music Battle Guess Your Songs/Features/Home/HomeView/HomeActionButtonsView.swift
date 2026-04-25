@@ -19,7 +19,6 @@ final class HomeActionButtonsView: UIView {
     }
 
     private func setupUI() {
-        // swiftlint:disable:next large_tuple
         let buttons: [(UIButton, String, ButtonStyle)] = [
             (startBattleButton, "Start Battle ⚔️", .primary),
             (premiumButton, "Premium 💎", .primary),

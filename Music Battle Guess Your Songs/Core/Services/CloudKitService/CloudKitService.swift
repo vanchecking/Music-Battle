@@ -132,24 +132,24 @@ extension CloudKitService {
         guard let userID = currentUser?.userID else { return }
 
         try await modifyRecord(userID: userID) { record in
-            // Бои
+            // Battles
             let battles = (record["totalBattles"] as? Int ?? 0) + 1
             record["totalBattles"] = battles as CKRecordValue
 
-            // Победы
+            // Wins
             if isWin {
                 let wins = (record["totalWins"] as? Int ?? 0) + 1
                 record["totalWins"] = wins as CKRecordValue
             }
 
-            // Рейтинг (ИНКРЕМЕНТ)
+            // Rating (with increment)
             if let rating {
                 let currentRating = record["rating"] as? Double ?? 0
                 record["rating"] = (currentRating + rating) as CKRecordValue
             }
         }
 
-        // Кэш
+        // Cache
         if var currentUser, currentUser.userID == userID {
             currentUser.totalBattles += 1
             if isWin { currentUser.totalWins += 1 }

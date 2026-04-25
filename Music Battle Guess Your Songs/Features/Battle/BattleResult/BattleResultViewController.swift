@@ -279,7 +279,6 @@ extension BattleResultViewController: UITableViewDataSource, UITableViewDelegate
         cell.accessoryView = imageView
         cell.selectionStyle = .none
 
-        // Добавим отступы через layoutMargins
         cell.layoutMargins = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
     }
 

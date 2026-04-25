@@ -12,8 +12,6 @@ final class SettingsCoordinator {
     }
 
     func start() {
-
-//        let settingsVC = SettingsViewController()
         let settingsVC = PaywallViewController(viewModel: .init(service: SubscriptionService.shared))
 
         navigationController.pushViewController(settingsVC, animated: false)

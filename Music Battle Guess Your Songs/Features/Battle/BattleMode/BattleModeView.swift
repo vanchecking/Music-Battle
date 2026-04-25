@@ -3,12 +3,15 @@ import SnapKit
 import Lottie
 
 final class BattleModeView: UIView {
-    // Closure called when Done button is tapped on keyboard
+
+    // MARK: - Callback
+    // Called when user taps "Done" on keyboard
     var onDone: ((String) -> Void)?
 
-    // MARK: - UI
-
+    // MARK: - Background
     private let gradientLayer = AppColors.mainGradient()
+
+    // MARK: - UI Components
     let foundArtistsView = FoundedArtistsView()
 
     let trendingButton = UIButton(type: .system)
@@ -23,6 +26,7 @@ final class BattleModeView: UIView {
         return view
     }()
 
+    // Tracks count label
     let tracksCountLabel: UILabel = {
         let label = UILabel()
         label.text = "Tracks Count: 7"
@@ -32,6 +36,7 @@ final class BattleModeView: UIView {
         return label
     }()
 
+    // Slider for selecting number of tracks
     let tracksCountSlider: UISlider = {
         let slider = UISlider()
         slider.minimumValue = 7
@@ -40,72 +45,65 @@ final class BattleModeView: UIView {
         return slider
     }()
 
+    // TextField for artist search input
     let trackSelectionTextField: UITextField = {
         let field = UITextField()
         field.placeholder = "Find Artists"
 
-        // Фон (слегка плотный, но не глухой)
         field.backgroundColor = UIColor.white.withAlphaComponent(0.15)
-
-        // Скругление
         field.layer.cornerRadius = 16
         field.layer.masksToBounds = false
 
-        // Граница (дает четкость)
         field.layer.borderWidth = 1
         field.layer.borderColor = UIColor.white.withAlphaComponent(0.3).cgColor
 
-        // Тень (чуть выразительнее)
         field.layer.shadowColor = UIColor.black.cgColor
         field.layer.shadowOpacity = 0.2
         field.layer.shadowOffset = CGSize(width: 0, height: 4)
         field.layer.shadowRadius = 8
 
-        // Цвет текста
         field.textColor = .white
 
-        // Placeholder поярче
         field.attributedPlaceholder = NSAttributedString(
             string: "Find Artists",
             attributes: [.foregroundColor: UIColor.white.withAlphaComponent(0.7)]
         )
 
-        // Иконка
+        // Left icon (search)
         let iconImageView = UIImageView(image: UIImage(systemName: "magnifyingglass"))
         iconImageView.tintColor = .white
         iconImageView.contentMode = .scaleAspectFit
-        iconImageView.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
 
         let iconContainerView = UIView(frame: CGRect(x: 0, y: 0, width: 36, height: 24))
-        iconImageView.center = CGPoint(x: iconContainerView.frame.width / 2, y: iconContainerView.frame.height / 2)
+        iconImageView.center = iconContainerView.center
         iconContainerView.addSubview(iconImageView)
 
         field.leftView = iconContainerView
         field.leftViewMode = .always
 
-        // Правый отступ
-        let rightPadding = UIView(frame: CGRect(x: 0, y: 0, width: 14, height: 0))
-        field.rightView = rightPadding
+        // Right padding
+        field.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 14, height: 0))
         field.rightViewMode = .always
 
         return field
     }()
 
+    // Blur behind search field
     private let searchGlassView: UIVisualEffectView = {
         let blur = UIBlurEffect(style: .systemUltraThinMaterialLight)
         let view = UIVisualEffectView(effect: blur)
         view.clipsToBounds = true
         view.layer.cornerRadius = 16
-        view.isUserInteractionEnabled = false // Let touches pass to textField
-        view.alpha = 0.95 // Stronger semi-transparent
+        view.alpha = 0.95
+        view.isUserInteractionEnabled = false
         return view
     }()
 
+    // MARK: - Constraints (keyboard handling)
     private var buttonStackBottomConstraint: Constraint!
     private var foundArtistsViewBottomConstraint: Constraint!
 
     // MARK: - Init
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -117,19 +115,19 @@ final class BattleModeView: UIView {
     }
 
     // MARK: - Layout
-
     override func layoutSubviews() {
         super.layoutSubviews()
         gradientLayer.frame = bounds
     }
 
+    // MARK: - UI Setup
     private func setupUI() {
+
         layer.insertSublayer(gradientLayer, at: 0)
 
+        // Loading overlay
         addSubview(loadingView)
-        loadingView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        loadingView.snp.makeConstraints { $0.edges.equalToSuperview() }
 
         addSubview(tracksCountLabel)
         addSubview(tracksCountSlider)
@@ -140,141 +138,155 @@ final class BattleModeView: UIView {
         hits2010Button.applyHomeStyle(title: "📀 Hits 2010–2019", style: .primary)
         hits2020Button.applyHomeStyle(title: "🚀 Hits 2020–2025", style: .primary)
 
-        // Add buttons
         addSubview(tiktokHitsButton)
         addSubview(trendingButton)
         addSubview(hits2010Button)
         addSubview(hits2020Button)
 
-        // Glass effect behind searchTextField
         addSubview(searchGlassView)
         addSubview(trackSelectionTextField)
 
-        // Add foundArtistsView, always visible, pinned at top below safe area
-        foundArtistsView.isHidden = false
+        // Artists list
         addSubview(foundArtistsView)
 
-        tracksCountLabel.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide).offset(16)
-            make.leading.equalToSuperview().inset(24)
+        // MARK: - Top controls
+        tracksCountLabel.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide).offset(16)
+            $0.leading.equalToSuperview().inset(24)
         }
 
-        tracksCountSlider.snp.makeConstraints { make in
-            make.top.equalTo(tracksCountLabel.snp.bottom).offset(8)
-            make.leading.trailing.equalToSuperview().inset(24)
+        tracksCountSlider.snp.makeConstraints {
+            $0.top.equalTo(tracksCountLabel.snp.bottom).offset(8)
+            $0.leading.trailing.equalToSuperview().inset(24)
         }
 
-        foundArtistsView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview()
-            make.top.equalTo(tracksCountSlider.snp.bottom).offset(16)
-            foundArtistsViewBottomConstraint = make.bottom.equalTo(trackSelectionTextField.snp.top).offset(-16).constraint
+        // MARK: - Artists list positioning
+        foundArtistsView.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.top.equalTo(tracksCountSlider.snp.bottom).offset(16)
+            foundArtistsViewBottomConstraint =
+                $0.bottom.equalTo(trackSelectionTextField.snp.top).offset(-16).constraint
         }
 
-        // Layout buttons at the bottom in stack view with stored bottom constraint
-        let buttonStack = UIStackView(arrangedSubviews: [trendingButton, tiktokHitsButton, hits2010Button, hits2020Button])
+        // MARK: - Bottom buttons
+        let buttonStack = UIStackView(arrangedSubviews: [
+            trendingButton,
+            tiktokHitsButton,
+            hits2010Button,
+            hits2020Button
+        ])
+
         buttonStack.axis = .vertical
         buttonStack.spacing = 16
         buttonStack.distribution = .fillEqually
         addSubview(buttonStack)
 
-        buttonStack.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(24)
-            buttonStackBottomConstraint = make.bottom.equalTo(safeAreaLayoutGuide).inset(16).constraint
-            make.height.equalTo(220) // 4 buttons * 50 + spacing
+        buttonStack.snp.makeConstraints {
+            $0.left.right.equalToSuperview().inset(24)
+            buttonStackBottomConstraint = $0.bottom.equalTo(safeAreaLayoutGuide).inset(16).constraint
+            $0.height.equalTo(220)
         }
 
-        // Layout searchGlassView and searchTextField above the buttons
-        searchGlassView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(24)
-            make.bottom.equalTo(buttonStack.snp.top).offset(-16)
-            make.height.equalTo(44)
+        // MARK: - Search field
+        searchGlassView.snp.makeConstraints {
+            $0.left.right.equalToSuperview().inset(24)
+            $0.bottom.equalTo(buttonStack.snp.top).offset(-16)
+            $0.height.equalTo(44)
         }
-        trackSelectionTextField.snp.makeConstraints { make in
-            make.edges.equalTo(searchGlassView)
+
+        trackSelectionTextField.snp.makeConstraints {
+            $0.edges.equalTo(searchGlassView)
         }
-        // Add input accessory view with Done button to searchTextField
+
+        // MARK: - Keyboard toolbar
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneBarButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
-        toolbar.items = [flexSpace, doneBarButton]
+
+        let flex = UIBarButtonItem(systemItem: .flexibleSpace)
+        let done = UIBarButtonItem(title: "Done",
+                                   style: .done,
+                                   target: self,
+                                   action: #selector(doneButtonTapped))
+
+        toolbar.items = [flex, done]
         trackSelectionTextField.inputAccessoryView = toolbar
     }
 
+    // MARK: - Done action
     @objc private func doneButtonTapped() {
         trackSelectionTextField.resignFirstResponder()
         onDone?(trackSelectionTextField.text ?? "")
     }
 
+    // MARK: - Public API
     func updateArtists(_ newArtists: [FoundedArtist]) {
-        self.foundArtistsView.updateArtists(newArtists)
+        foundArtistsView.updateArtists(newArtists)
     }
 
+    // MARK: - Keyboard handling
     private func registerForKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(notification:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide(notification:)),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
     }
 
     @objc private func keyboardWillShow(notification: Notification) {
         guard let userInfo = notification.userInfo,
-              let animationDuration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
-              let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber,
-              let keyboardFrameValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+              let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
+              let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber,
+              let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
 
-        let animationCurveRaw = animationCurveRawNSN.uintValue
-        let animationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw << 16)
-        let keyboardFrame = keyboardFrameValue.cgRectValue
-        let keyboardHeight = keyboardFrame.height - safeAreaInsets.bottom
+        let options = UIView.AnimationOptions(rawValue: curve.uintValue << 16)
+        let keyboardHeight = frame.cgRectValue.height - safeAreaInsets.bottom
 
-        // Hide buttons by fading out and moving off screen
         buttonStackBottomConstraint.update(offset: -keyboardHeight - 220 - 16)
-
-        // Adjust foundArtistsView bottom constraint to be above searchTextField with offset -16 (unchanged)
         foundArtistsViewBottomConstraint.update(offset: -16)
 
-        UIView.animate(withDuration: animationDuration, delay: 0, options: animationOptions, animations: {
-            self.trendingButton.alpha = 0
-            self.tiktokHitsButton.alpha = 0
-            self.hits2010Button.alpha = 0
-            self.hits2020Button.alpha = 0
-            self.tracksCountSlider.alpha = 0
-            self.tracksCountLabel.alpha = 0
-
+        UIView.animate(withDuration: duration, delay: 0, options: options) {
+            self.setControlsAlpha(0)
             self.layoutIfNeeded()
-        }, completion: nil)
+        }
     }
 
     @objc private func keyboardWillHide(notification: Notification) {
         guard let userInfo = notification.userInfo,
-              let animationDuration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
-              let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber else { return }
+              let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
+              let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber else { return }
 
-        let animationCurveRaw = animationCurveRawNSN.uintValue
-        let animationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw << 16)
+        let options = UIView.AnimationOptions(rawValue: curve.uintValue << 16)
 
-        // Show buttons by resetting buttonStack bottom constraint
         buttonStackBottomConstraint.update(offset: -16)
-
-        // Adjust foundArtistsView bottom constraint to be above searchTextField with offset -16 (unchanged)
         foundArtistsViewBottomConstraint.update(offset: -16)
 
-        UIView.animate(withDuration: animationDuration, delay: 0, options: animationOptions, animations: {
-            self.trendingButton.alpha = 1
-            self.tiktokHitsButton.alpha = 1
-            self.hits2010Button.alpha = 1
-            self.hits2020Button.alpha = 1
-            self.tracksCountSlider.alpha = 1
-            self.tracksCountLabel.alpha = 1
-
+        UIView.animate(withDuration: duration, delay: 0, options: options) {
+            self.setControlsAlpha(1)
             self.layoutIfNeeded()
-        }, completion: nil)
+        }
     }
 
+    // MARK: - Helper
+    private func setControlsAlpha(_ value: CGFloat) {
+        trendingButton.alpha = value
+        tiktokHitsButton.alpha = value
+        hits2010Button.alpha = value
+        hits2020Button.alpha = value
+        tracksCountSlider.alpha = value
+        tracksCountLabel.alpha = value
+    }
+
+    // MARK: - Cleanup
     deinit {
         Logger.log("🧼")
         NotificationCenter.default.removeObserver(self)
     }
 
+    // MARK: - Loading state
     func hideAllExceptLoading() {
         trendingButton.isHidden = true
         tiktokHitsButton.isHidden = true
@@ -283,8 +295,9 @@ final class BattleModeView: UIView {
         foundArtistsView.isHidden = true
         trackSelectionTextField.isHidden = true
         searchGlassView.isHidden = true
-        loadingView.isHidden = false
         tracksCountSlider.isHidden = true
         tracksCountLabel.isHidden = true
+
+        loadingView.isHidden = false
     }
 }

@@ -114,8 +114,8 @@ final class AppCoordinator {
         coordinator.start()
     }
 
+    // Clear other coordinators
     func showLoginWithTransition() {
-        // Clear other coordinators
         clearCoordinators()
         let coordinator = LoginCoordinator(navigationController: navigationController,
                                            appCoordinator: self,

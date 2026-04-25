@@ -36,7 +36,7 @@ final class MusicService {
     func preloadMusicKit() {
         Task {
             do {
-                // Получаем топ-артистов из RemoteConfig
+                // Get top artists RemoteConfig
                 let queries = [
                     RemoteConfigService.shared.topArtist1,
                     RemoteConfigService.shared.topArtist2,
@@ -119,7 +119,7 @@ final class MusicService {
         let response = try await request.response()
         guard let playlist = response.items.first else { return [] }
 
-        // Используем with([.tracks]) для надежного получения треков
+        // using with([.tracks]) for get tracks, not nils
         let tracks = try await playlist.with([.tracks]).tracks ?? []
         let allTracks = Array(tracks)
 

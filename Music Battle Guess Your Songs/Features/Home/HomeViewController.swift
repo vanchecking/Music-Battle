@@ -84,11 +84,7 @@ final class HomeViewController: UIViewController {
     }
 
     @objc private func logoutTapped() {
-        viewModel.logout()
-//        Task {
-//            try await CloudKitService.shared.deleteUserProfile(userID: CloudKitService.shared.currentUser?.userID ?? "")
-//        }
-//        
+        viewModel.logout()  
     }
 
     @objc private func battleHistoryTapped() {

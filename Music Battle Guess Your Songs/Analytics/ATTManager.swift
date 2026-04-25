@@ -21,7 +21,7 @@ final class ATTManager {
         switch status {
         case .authorized:
             let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
-            // передаём IDFA в Amplitude для точной атрибуции
+            //  IDFA in Amplitude for precise atribution
             let identify = Identify()
             identify.set(property: "idfa", value: idfa)
             AnalyticsService.shared.setIDFA(idfa)
